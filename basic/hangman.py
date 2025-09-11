@@ -3,7 +3,7 @@ import random
 
 print("Welcome to Hangman!")
 
-wordlist = ["gurka", "morot", "dragon"]
+wordlist = ["gurka", "morot", "dragon", "korv"]
 
 secret_word = random.choice(wordlist)
 display_word = []
