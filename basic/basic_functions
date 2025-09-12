@@ -1,0 +1,5 @@
+def kvadrat_meter(m1: int, m2: int) -> int:
+    value = m1 * m2
+    return value
+
+print(kvadrat_meter(10,56))
