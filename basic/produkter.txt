@@ -1,0 +1,5 @@
+Produkt: Apelsin, Pris: 12.99, Antal: 100
+Produkt: Clementin, Pris: 8.49, Antal: 150
+Produkt: Banan, Pris: 6.75, Antal: 80
+Produkt: Druvor, Pris: 19.50, Antal: 60
+Produkt: Mango, Pris: 15.25, Antal: 120
