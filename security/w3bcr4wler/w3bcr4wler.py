@@ -30,24 +30,27 @@ print(r"""
 
 visited_urls = set()
 
-
+# Function that takes an url and a keyword that must be present in the url.
 def spider_urls(url, keyword):
-    pass
-    #response = requests.get(url)
-    #soup = BeautifulSoup(response.content, "html.parser")
+    try:
+        response = requests.get(url)
 
-
-
-
-
-
-
-
-
-
-
-
-
+    except:
+        print(f"Request failed {url}")
+        return
+    
+    if response.status_code == 200:
+        soup = BeautifulSoup(response.content, 'html.parser')
+        
+        a_tag = soup.find_all('a')
+        urls = []
+        for tag in a_tag:
+            href = tag.get("href")
+            if href is not None and href != "":
+                urls.append(href)
+        print(urls)
+    else:
+      print(f"Got status code {response.status_code} from {url}")
 
 
 
@@ -55,4 +58,4 @@ def spider_urls(url, keyword):
 url = input("What URL would you like to cr4wl over: ")
 keyword = input("Enter a keyword that should be present in the url: ")
 
-spider_urls(url, keyword):
+spider_urls(url, keyword)
