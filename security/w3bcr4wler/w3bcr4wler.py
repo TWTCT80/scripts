@@ -1,11 +1,14 @@
 import requests
 from bs4 import BeautifulSoup
+from urllib import *
 
 # Jag använder alltså requests för att hämta sidan, 
 # och BeautifulSoup för att analysera innehållet.
 
-def get_page(url):
-    pass
+# https://en.wikipedia.org/wiki/Hacker
+
+
+    
 
 
 print(r"""
@@ -24,4 +27,32 @@ print(r"""
     -----------------------
      ---- W3BCR4WLER ----
 """)
-get_page(input("What URL would you like to cr4wl over: "))
+
+visited_urls = set()
+
+
+def spider_urls(url, keyword):
+    pass
+    #response = requests.get(url)
+    #soup = BeautifulSoup(response.content, "html.parser")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+url = input("What URL would you like to cr4wl over: ")
+keyword = input("Enter a keyword that should be present in the url: ")
+
+spider_urls(url, keyword):
