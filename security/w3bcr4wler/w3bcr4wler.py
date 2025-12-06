@@ -1,14 +1,16 @@
 import requests
 from bs4 import BeautifulSoup
-from urllib import *
+from urllib.parse import urljoin
 
 # Jag använder alltså requests för att hämta sidan, 
 # och BeautifulSoup för att analysera innehållet.
 
+#Skapa en meny där man kan välja olika funktioner
+    # sök efter comments
+    #   
+
+
 # https://en.wikipedia.org/wiki/Hacker
-
-
-    
 
 
 print(r"""
@@ -48,11 +50,16 @@ def spider_urls(url, keyword):
             href = tag.get("href")
             if href is not None and href != "":
                 urls.append(href)
-        print(urls)
+        
     else:
       print(f"Got status code {response.status_code} from {url}")
 
-
+    for urls2 in urls:
+        if urls2 not in visited_urls:
+            visited_urls.add(urls2)
+            url_join = urljoin(url, urls2)
+            if keyword in url_join:
+                print(url_join)
 
 
 url = input("What URL would you like to cr4wl over: ")
